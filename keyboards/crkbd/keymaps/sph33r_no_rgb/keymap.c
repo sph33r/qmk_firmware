@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_NO,   KC_NO,   KC_NO,  KC_HOME,  KC_END,                       KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, KC_NO,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_PSCR,                      KC_PGUP, KC_PGDN, _______, _______, _______, _______, 
+      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_PSCR,                      KC_PGUP, KC_PGDN, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,  MO(3), _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -85,12 +85,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
-
-// begin keyboard combos 
-const uint16_t PROGMEM ctrlgrave[] = {KC_Q, KC_T, COMBO_END};
-combo_t key_combos[COMBO_COUNT] = {
-    COMBO(ctrlgrave, LCTL(KC_GRV)),
-};
-
-// end keyboard combos 
 
