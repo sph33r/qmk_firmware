@@ -23,6 +23,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Select hand configuration */
 #define MASTER_LEFT
 
+// Configure the global tapping term (default: 200ms)
+#define TAPPING_TERM 240
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_FORCE_HOLD
+
 // Turn on capsword if left shift is double pressed.
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
