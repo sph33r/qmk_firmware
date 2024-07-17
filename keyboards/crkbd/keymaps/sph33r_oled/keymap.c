@@ -20,8 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdio.h>
 
 // Left-hand home row mods
-// I took gui out since I have a button for that dedicated on the keyboard. 
-// I suppose the same could be said about ctrl. 
+// I took gui out since I have a button for that dedicated on the keyboard.
+// I suppose the same could be said about ctrl.
 //#define HOME_A LGUI_T(KC_A)
 #define HOME_S LALT_T(KC_S)
 #define HOME_D LCTL_T(KC_D)
@@ -65,9 +65,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO,   KC_NO,   KC_NO,  KC_HOME,  KC_END,                       KC_LEFT,  KC_DOWN,  KC_UP,  KC_RIGHT, KC_NO,  KC_NO,
+      _______, KC_NO,   KC_HOME, KC_PDGN, KC_PGUP, KC_END,                       KC_LEFT,  KC_DOWN,  KC_UP,  KC_RIGHT, KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO, KC_CUT, KC_COPY, KC_PSTE,  KC_PSCR,                       KC_PGUP, KC_PGDN,   KC_NO,  _______,  KC_NO, _______, 
+      _______, KC_NO,   _______, _______, _______, KC_PSCR,                        _______, _______,  _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,  MO(3), _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -86,14 +86,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-// begin keyboard combos 
+// begin keyboard combos
 #ifdef COMBO_ENABLE
 const uint16_t PROGMEM ctrlgrave[] = {KC_Q, KC_T, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(ctrlgrave, LCTL(KC_GRV)),
 };
 #endif
-// end keyboard combos 
+// end keyboard combos
 
 
 #ifdef OLED_ENABLE

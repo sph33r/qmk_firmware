@@ -33,7 +33,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 #endif
 // end tapdance
- 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -64,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO,   KC_NO,   KC_NO,  KC_HOME,  KC_END,                       KC_LEFT,  KC_DOWN,  KC_UP,  KC_RIGHT, KC_NO,  KC_NO,
+      _______, KC_NO,   KC_HOME, KC_PGDN, KC_PGUP, KC_END,                       KC_LEFT,  KC_DOWN,  KC_UP,  KC_RIGHT, KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO, KC_CUT, KC_COPY, KC_PSTE,  KC_PSCR,                       KC_PGUP, KC_PGDN,   _______,  _______,  _______, _______, 
+      _______, KC_NO,   _______, _______, _______,  KC_PSCR,                     _______, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,  MO(3), _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -85,13 +85,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-// begin keyboard combos 
+// begin keyboard combos
 const uint16_t PROGMEM ctrlgrave[] = {KC_Q, KC_T, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(ctrlgrave, LCTL(KC_GRV)),
 };
 
-// end keyboard combos 
+// end keyboard combos
 
 
 #ifdef OLED_ENABLE
