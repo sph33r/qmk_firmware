@@ -34,11 +34,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define HOME_SCLN RGUI_T(KC_SCLN)
 // end home row mods
 
+// Begin tap dance
+enum {
+    TD_CTRL_BSPC,
+};
+
+// Tap Dance definition
+tap_dance_action_t tap_dance_actions[] = {
+    // Tap once for backspace, twice for ctrl+backspace
+    [TD_CTRL_BSPC] = ACTION_TAP_DANCE_DOUBLE(KC_BSPC, LCTL(KC_BSPC)),
+};
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_GESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                        KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_BSPC,
+      QK_GESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                        KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   TD(TD_CTRL_BSPC),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_TAB,   KC_A,    HOME_S,  HOME_D,  HOME_F,  KC_G,                        KC_H,    HOME_J,  HOME_K,  HOME_L, KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -53,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TILD, KC_EXLM,  KC_AT, KC_HASH,  KC_DLR, KC_PERC,                       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO,   KC_NO,  KC_NO,   KC_UNDS, KC_MINS,                       KC_PIPE, KC_LBRC, KC_RBRC,  KC_NO,  KC_NO,  KC_NO,
+      _______, KC_NO,   KC_NO,  KC_NO,   KC_UNDS, KC_PMNS,                       KC_PIPE, KC_LBRC, KC_RBRC,  KC_NO,  KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_NO,  KC_BTN1, KC_BTN2, KC_EQL,  KC_PLUS,                       KC_BSLS, KC_LCBR, KC_RCBR,  KC_NO,  KC_NO,  _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -67,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_NO,   KC_HOME, KC_PGDN, KC_PGUP, KC_END,                       KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, _______, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_PSCR,                      _______, ______, _______, _______, _______, _______,
+      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_PSCR,                      _______, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,  MO(3), _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -81,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_NO,   KC_NO,  KC_BTN1, KC_BTN2,  KC_NO,   KC_NO,                        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______,  KC_LSFT,     KC_SPC, _______, _______
+                                          _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   )
 };
