@@ -25,3 +25,6 @@
 #define SPLIT_USB_DETECT
 
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
+// Try to make the encoders work smoothly
+#define ENCODER_RESOLUTION 2
