@@ -8,9 +8,9 @@
 #define HOME_F LCTL_T(KC_F)
 
 // Right-hand home row mods
-#define HOME_J RCTL_T(KC_J)
+#define HOME_J LCTL_T(KC_J)
 #define HOME_K LALT_T(KC_K)
-#define HOME_L RGUI_T(KC_L)
+#define HOME_L LGUI_T(KC_L)
 //#define HOME_SCLN RSFT_T(KC_SCLN)
 // end home row mods
 
