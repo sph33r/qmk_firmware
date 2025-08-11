@@ -73,13 +73,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, KC_NO, KC_WBAK, KC_WFWD, KC_WREF, KC_NO,                         KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,  KC_NO,  KC_NO,
+      QK_BOOT, KC_NO,  KC_NO, KC_VOLD, KC_VOLU, KC_MUTE,                         KC_NO,  MS_BTN1, MS_UP,   MS_BTN2,  KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO, RGB_SPI, RGB_SAI, RGB_HUI, RGB_VAI, RGB_TOG,                       KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,  KC_NO,  KC_NO,
+      KC_NO,  RGB_SPI, RGB_SAI, RGB_HUI, RGB_VAI, RGB_TOG,                       KC_NO,  MS_LEFT, MS_DOWN, MS_RGHT,  KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO, RGB_SPD, RGB_SAD, RGB_HUD, RGB_VAD, RGB_MOD,                       KC_BTN1, KC_BTN2,  KC_NO,  KC_NO,   KC_NO,   KC_NO,
+      KC_NO,  RGB_SPD, RGB_SAD, RGB_HUD, RGB_VAD, RGB_MOD,                       KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______, _______,    _______, _______, _______
+                                         _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   )
 };
