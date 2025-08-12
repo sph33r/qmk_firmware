@@ -75,11 +75,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, KC_NO,  KC_NO,   KC_MUTE,  KC_VOLD, KC_VOLU,                      KC_NO,  MS_BTN1, MS_UP,  MS_BTN2,   KC_NO,  KC_NO,
+      QK_BOOT, KC_NO,  KC_NO,   KC_MUTE,  KC_VOLD, KC_VOLU,                      KC_NO,  MS_BTN1, MS_UP,   MS_BTN2,  KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO,   KC_NO,  KC_NO,   KC_NO,    KC_NO,   KC_NO,                        KC_NO,  MS_LEFT, MS_DOWN, MS_RGHT,  KC_NO,   KC_NO,
+      KC_NO,   KC_NO,  KC_NO,   KC_NO,    KC_NO,   KC_NO,                        KC_NO,  MS_LEFT, MS_DOWN, MS_RGHT,  KC_NO,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO,   KC_NO,  KC_NO,   KC_NO,    KC_NO,   KC_NO,                        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+      KC_NO,   KC_NO,  KC_NO,   KC_NO,    KC_NO,   KC_NO,                        KC_NO,  MS_WHLD, KC_NO,   MS_WHLU,  KC_NO,   KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
