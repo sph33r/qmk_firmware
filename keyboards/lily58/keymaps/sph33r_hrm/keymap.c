@@ -2,16 +2,16 @@
 
 // begin home row mods
 // Left-hand home row mods
-//#define HOME_A LSFT_T(KC_A)
-#define HOME_S LGUI_T(KC_S)
-#define HOME_D LALT_T(KC_D)
+//#define HOME_A LGUI_T(KC_A)
+#define HOME_S LALT_T(KC_S)
+#define HOME_D LSFT_T(KC_D)
 #define HOME_F LCTL_T(KC_F)
 
 // Right-hand home row mods
-#define HOME_J LCTL_T(KC_J)
-#define HOME_K LALT_T(KC_K)
-#define HOME_L LGUI_T(KC_L)
-//#define HOME_SCLN RSFT_T(KC_SCLN)
+#define HOME_J RCTL_T(KC_J)
+#define HOME_K RSFT_T(KC_K)
+#define HOME_L RALT_T(KC_L)
+//#define HOME_SCLN RGUI_T(KC_SCLN)
 // end home row mods
 
 enum layer_number {
